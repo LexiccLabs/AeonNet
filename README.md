@@ -10,6 +10,7 @@ This implementation is made on the reference code from the aeternity eco system.
 - https://github.com/aekiti/superchat
 - https://github.com/genievot/aeternity-simple-oracle
 - https://github.com/petarbaykov/aeternity-aepp
+- https://aeternity.com/aepp-sdk-js/develop/examples/node/contract-interaction.html
 
 ## Get started
 
