@@ -1,7 +1,6 @@
-# Boilerplate Aepp Vue.JS Frontend
+# AeonNet Trade Time Value Streaming Platform
 
-This boilerplate is designed to allow everyone an easy start when building an aepp on 
-top of the aeternity eco system. It contains three critical parts:
+This implementation is made on the reference code from the aeternity eco system. It contains three critical parts:
 - A custom build pipeline
 - Easy wallet discovery
 - The [aeternity js-sdk](https://github.com/aeternity/aepp-sdk-js)
