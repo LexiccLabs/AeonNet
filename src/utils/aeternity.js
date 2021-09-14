@@ -29,7 +29,7 @@ aeternity.initProvider = async (changedClient = false) => {
     const changedNetwork = aeternity.networkId !== networkId;
     aeternity.networkId = networkId
     if (aeternity.contractAddress)
-      aeternity.contract = await aeternity.client.getContractInstance(identity, {contractAddress: aeternity.contractAddress});
+      aeternity.contract = await aeternity.client.getContractInstance(AeonToken, {contractAddress: aeternity.contractAddress});
     if (changedClient || changedNetwork) {
       EventBus.$emit('networkChange');
       EventBus.$emit('dataChange');
