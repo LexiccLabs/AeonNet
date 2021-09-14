@@ -6,6 +6,11 @@ This implementation is made on the reference code from the aeternity eco system.
 - The [aeternity js-sdk](https://github.com/aeternity/aepp-sdk-js)
 - Already styled components (see [aepp-components](https://github.com/aeternity/aepp-components))
 
+## References
+- https://github.com/aekiti/superchat
+- https://github.com/genievot/aeternity-simple-oracle
+- https://github.com/petarbaykov/aeternity-aepp
+
 ## Get started
 
 Clone repo via git or use the template button above.
