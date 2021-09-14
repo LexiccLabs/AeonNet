@@ -1,0 +1,46 @@
+@compiler >= 6
+
+contract AeonActivity =
+
+    record state =
+        { index         : int
+        , map_activities  : map(string, activity) }
+
+    record Activity =
+        { id    : int
+        , name  : string
+        , did   : int }
+
+    stateful entrypoint init() = 
+        { index = 1,
+          map_activities = {} }
+
+    stateful entrypoint create_activity(activity_name: string) =
+        require(!name_exists(activity_name), "Name is already taken")
+        let did : int = generate_did(activity_name)
+        create_activity_by_name_did(activity_name, did)
+
+    entrypoint name_exists(name: string) : bool =
+        Map.member(name, state.map_activities)
+
+    entrypoint get_activity_did(name: string) : int =
+        require(name_exists(name), "There is no activity with that name!")
+        let needed_activity : hamster = state.map_activities[name]
+        needed_activity.did
+
+    stateful function create_activity_by_name_did(name: string, did: int) =
+        let new_activity : activity =
+            { id    = state.index,
+              name  = name,
+              did   = did }
+
+        put(state{map_activities[name] = new_activity})
+        put(state{index = (state.index + 1)})
+
+    function generate_did(name: string) : int =
+        get_block_hash_bytes_as_int() - Chain.timestamp + state.index
+
+    function get_block_hash_bytes_as_int() : int =
+        switch(Chain.block_hash(Chain.block_height))
+            None        => abort("blockhash not found")
+            Some(bytes) => Bytes.to_int(bytes)

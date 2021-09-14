@@ -1,2 +1,0 @@
-contract AeonIdentity =
-  entrypoint main(x : int) = x
