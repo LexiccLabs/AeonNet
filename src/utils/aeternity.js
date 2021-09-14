@@ -1,5 +1,5 @@
 import AeonToken from '../contracts/AeonToken.aes';
-import AeonIdentity from '../contracts/AeonIdenitity.aes';
+import AeonActivity from '../contracts/AeonActivity.aes';
 import {Node, Universal, MemoryAccount} from '@aeternity/aepp-sdk/es';
 import {EventBus} from './eventBus';
 import BrowserWindowMessageConnection from "@aeternity/aepp-sdk/es/utils/aepp-wallet-communication/connection/browser-window-message";
