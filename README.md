@@ -1,4 +1,4 @@
-# AeonNet Trade Time Value Streaming Platform
+# AeonNet Derivative Time Transitive Value Trading Platform
 
 This implementation is made on the reference code from the aeternity eco system. It contains three critical parts:
 - A custom build pipeline
