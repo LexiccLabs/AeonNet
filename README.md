@@ -1,4 +1,4 @@
-# AeonNet Derivative Time Transitive Value Trading Platform
+# Derivative Trading Time Tokenisation Platform
 
 This implementation is made on the reference code from the aeternity eco system. It contains three critical parts:
 - A custom build pipeline
